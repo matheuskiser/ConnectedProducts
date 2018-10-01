@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/connectPageFragment">
+
+    <fragment
+        android:id="@+id/connectPageFragment"
+        android:name="com.nike.iser.connectedproducts.ConnectPageFragment"
+        android:label="Connect Page"
+        tools:layout="@layout/fragment_connect_page">
+        <action
+            android:id="@+id/action_connectPageFragment_to_scanFragment"
+            app:destination="@id/scanFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/scanFragment"
+        android:name="com.nike.iser.connectedproducts.ScanFragment"
+        android:label="Scan Page"
+        tools:layout="@layout/fragment_scan">
+        <action
+            android:id="@+id/action_scanFragment_to_finalDestinationFragment"
+            app:destination="@id/finalDestinationFragment"
+            app:popUpTo="@id/scanFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/finalDestinationFragment"
+        android:name="com.nike.iser.connectedproducts.FinalDestinationFragment"
+        android:label="Final Destination Page"
+        tools:layout="@layout/fragment_final_destination">
+        <action
+            android:id="@+id/action_finalDestinationFragment_to_connectPageFragment"
+            app:destination="@id/connectPageFragment" />
+    </fragment>
+
+</navigation>
