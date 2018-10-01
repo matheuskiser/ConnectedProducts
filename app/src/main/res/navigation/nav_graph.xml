@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/introFragment">
+
+    <fragment
+        android:id="@+id/introFragment"
+        android:name="com.nike.iser.connectedproducts.IntroFragment"
+        android:label="Intro Page"
+        tools:layout="@layout/fragment_intro">
+        <action
+            android:id="@+id/action_introFragment_to_nfcScanFragment"
+            app:destination="@id/nfcScanFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nfcScanFragment"
+        android:name="com.nike.iser.connectedproducts.NfcScanFragment"
+        android:label="Scan Page"
+        tools:layout="@layout/fragment_nfc_scan">
+        <action
+            android:id="@+id/action_nfcScanFragment_to_finalDestinationFragment"
+            app:destination="@id/finalDestinationFragment"
+            app:popUpTo="@id/nfcScanFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_nfcScanFragment_to_outsideActivity"
+            app:destination="@id/outsideActivity"
+            app:popUpTo="@id/nfcScanFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/finalDestinationFragment"
+        android:name="com.nike.iser.connectedproducts.FinalDestinationFragment"
+        android:label="Final Destination Page"
+        tools:layout="@layout/fragment_final_destination">
+    </fragment>
+
+    <activity
+        android:id="@+id/outsideActivity"
+        android:name="com.nike.iser.connectedproducts.OutsideActivity"
+        android:label="activity_outside"
+        tools:layout="@layout/activity_outside" />
+
+</navigation>
