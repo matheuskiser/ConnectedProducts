@@ -22,7 +22,9 @@
         tools:layout="@layout/fragment_scan">
         <action
             android:id="@+id/action_scanFragment_to_finalDestinationFragment"
-            app:destination="@id/finalDestinationFragment" />
+            app:destination="@id/finalDestinationFragment"
+            app:popUpTo="@id/scanFragment"
+            app:popUpToInclusive="true"/>
     </fragment>
 
     <fragment
