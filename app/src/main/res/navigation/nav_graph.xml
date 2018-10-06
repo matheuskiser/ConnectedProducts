@@ -25,6 +25,11 @@
             app:destination="@id/finalDestinationFragment"
             app:popUpTo="@id/scanFragment"
             app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_scanFragment_to_outsideActivity"
+            app:destination="@id/outsideActivity"
+            app:popUpTo="@id/scanFragment"
+            app:popUpToInclusive="true"/>
     </fragment>
 
     <fragment
@@ -32,9 +37,12 @@
         android:name="com.nike.iser.connectedproducts.FinalDestinationFragment"
         android:label="Final Destination Page"
         tools:layout="@layout/fragment_final_destination">
-        <action
-            android:id="@+id/action_finalDestinationFragment_to_connectPageFragment"
-            app:destination="@id/connectPageFragment" />
     </fragment>
+
+    <activity
+        android:id="@+id/outsideActivity"
+        android:name="com.nike.iser.connectedproducts.OutsideActivity"
+        android:label="activity_outside"
+        tools:layout="@layout/activity_outside" />
 
 </navigation>

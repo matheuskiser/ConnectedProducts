@@ -24,5 +24,9 @@ class ScanFragment : Fragment() {
         navigateToFinalDestinationPageButton.setOnClickListener {
             view.findNavController().navigate(R.id.action_scanFragment_to_finalDestinationFragment)
         }
+
+        navigateToOutsideActivityButton.setOnClickListener {
+            view.findNavController().navigate(R.id.action_scanFragment_to_outsideActivity)
+        }
     }
 }
