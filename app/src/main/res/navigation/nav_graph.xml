@@ -21,8 +21,8 @@
         android:label="Scan Page"
         tools:layout="@layout/fragment_scan">
         <action
-            android:id="@+id/action_scanFragment_to_finalDestinationFragment"
-            app:destination="@id/finalDestinationFragment"
+            android:id="@+id/action_scanFragment_to_threadFragment"
+            app:destination="@id/threadFragment"
             app:popUpTo="@id/scanFragment"
             app:popUpToInclusive="true"/>
         <action
@@ -33,10 +33,10 @@
     </fragment>
 
     <fragment
-        android:id="@+id/finalDestinationFragment"
-        android:name="com.nike.iser.connectedproducts.FinalDestinationFragment"
-        android:label="Final Destination Page"
-        tools:layout="@layout/fragment_final_destination">
+        android:id="@+id/threadFragment"
+        android:name="com.nike.iser.connectedproducts.ThreadFragment"
+        android:label="Thread Page"
+        tools:layout="@layout/fragment_thread">
     </fragment>
 
     <activity

@@ -16,12 +16,4 @@ class ThreadFragment : Fragment() {
                               savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_thread, container, false)
     }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        navigateProductDetailPageButton.setOnClickListener {
-            view.findNavController().navigate(R.id.action_threadFragment_to_productDetailFragment)
-        }
-    }
 }

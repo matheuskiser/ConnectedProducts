@@ -22,7 +22,7 @@ class ScanFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         navigateToFinalDestinationPageButton.setOnClickListener {
-            view.findNavController().navigate(R.id.action_scanFragment_to_finalDestinationFragment)
+            view.findNavController().navigate(R.id.action_scanFragment_to_threadFragment)
         }
 
         navigateToOutsideActivityButton.setOnClickListener {
